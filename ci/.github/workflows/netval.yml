@@ -1,0 +1,26 @@
+# GitHub Actions job for the network source-of-truth repository.
+# Runs the agentic validator on every pull request and posts the verdict as a PR comment.
+name: network-change-validation
+on:
+  pull_request:
+    paths: ["configs/**", "inventory/**"]
+jobs:
+  validate:
+    runs-on: [self-hosted, netlab]          # runner with Ollama + the twin (configs never leave the company)
+    steps:
+      - uses: actions/checkout@v4
+        with: { path: head }
+      - uses: actions/checkout@v4
+        with: { ref: "${{ github.base_ref }}", path: base }
+      - name: Write ticket
+        run: echo "${{ github.event.pull_request.title }} ${{ github.event.pull_request.body }}" > ticket.txt
+      - name: Validate change in the digital twin
+        id: gate
+        run: python netval/ci/validate_pr.py --base base --head head --ticket ticket.txt --model local
+        continue-on-error: true
+      - name: Post verdict on the PR
+        uses: marocchino/sticky-pull-request-comment@v2
+        with: { path: comment.md }
+      - name: Fail on block (exit 1); escalate (exit 2) requests a human reviewer
+        if: steps.gate.outcome == 'failure'
+        run: exit 1

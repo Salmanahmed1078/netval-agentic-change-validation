@@ -1,0 +1,56 @@
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [14/Nov/2026 02:58:45] "GET /case/D-MTU-1-F?autorun=1&intent=clear&model=hosted HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 02:58:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [14/Nov/2026 02:58:52] "POST /api/validate HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 02:58:57] "GET /case/I-BGP-1-S?autorun=1&intent=terse&model=hosted HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 02:58:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [14/Nov/2026 02:58:58] "POST /api/validate HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 02:59:04] "GET /case/D-ACL-1-S?autorun=1&intent=clear&model=hosted HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 02:59:05] "POST /api/validate HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 02:59:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [14/Nov/2026 03:07:00] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:00] "GET /figures/fig_time_vs_detection.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:00] "GET /figures/fig_main_rates.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:00] "GET /figures/fig_intent_quality.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /results HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_ablation.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_architecture.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_confusion.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_cost.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_dataset.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_failures.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_intent_quality.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_literature.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_main_rates.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_tiers.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_time_vs_detection.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_topologies.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:02] "GET /figures/fig_tests_time_box.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:03] "GET /figures/fig_per_class.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:07:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [14/Nov/2026 03:30:44] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:44] "GET /figures/fig_main_rates.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:44] "GET /figures/fig_time_vs_detection.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:44] "GET /figures/fig_intent_quality.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /results HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_architecture.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_ablation.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_confusion.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_dataset.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_failures.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_cost.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_literature.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_intent_quality.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_main_rates.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_per_class.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_tests_time_box.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_tiers.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_time_vs_detection.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "GET /figures/fig_topologies.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Nov/2026 03:30:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

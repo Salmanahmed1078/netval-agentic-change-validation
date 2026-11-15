@@ -1,0 +1,6 @@
+[agent_local] 32 runs to do (0 already done)
+[agent_local] 10/32 done, 0.0 min elapsed, ~0.0 min left (last: D-VLAN-1-F clear -> block, label unsafe)
+[agent_local] 20/32 done, 3.6 min elapsed, ~2.2 min left (last: I-STA-1-F clear -> approve, label unsafe)
+[agent_local] 30/32 done, 12.3 min elapsed, ~0.8 min left (last: I-MNT-1-F clear -> block, label unsafe)
+[agent_local] 32/32 done, 13.8 min elapsed, ~0.0 min left (last: I-RED-1-S clear -> approve, label safe)
+LOCAL_DONE

@@ -1,0 +1,6 @@
+.env
+.venv/
+__pycache__/
+*.tmp.pdf
+.DS_Store
+.pytest_cache/

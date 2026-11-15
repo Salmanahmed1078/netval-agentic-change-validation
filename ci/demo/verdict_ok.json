@@ -1,0 +1,295 @@
+{
+ "verdict": "approve",
+ "reason": "all 10 tests passed, coverage 100%",
+ "tests": [
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "tcp/5432",
+   "expect": "allow"
+  },
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "tcp/22",
+   "expect": "unchanged"
+  },
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "icmp",
+   "expect": "unchanged"
+  },
+  {
+   "t": "reach",
+   "src": "stage-b1",
+   "dst": "db-a1",
+   "svc": "tcp/5432",
+   "expect": "unchanged"
+  },
+  {
+   "t": "reach",
+   "src": "web-a1",
+   "dst": "db-a1",
+   "svc": "tcp/5432",
+   "expect": "unchanged"
+  },
+  {
+   "t": "reach",
+   "src": "wan-user1",
+   "dst": "db-a1",
+   "svc": "tcp/5432",
+   "expect": "deny"
+  },
+  {
+   "t": "inv",
+   "name": "no_loops"
+  },
+  {
+   "t": "inv",
+   "name": "mgmt_reachable"
+  },
+  {
+   "t": "inv",
+   "name": "isolation"
+  },
+  {
+   "t": "inv",
+   "name": "no_leak"
+  }
+ ],
+ "results": [
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "tcp/5432",
+    "expect": "allow"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "all allow",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "tcp/22",
+    "expect": "unchanged"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "unchanged",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "icmp",
+    "expect": "unchanged"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "unchanged",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-b1",
+    "dst": "db-a1",
+    "svc": "tcp/5432",
+    "expect": "unchanged"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "unchanged",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "web-a1",
+    "dst": "db-a1",
+    "svc": "tcp/5432",
+    "expect": "unchanged"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "unchanged",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "wan-user1",
+    "dst": "db-a1",
+    "svc": "tcp/5432",
+    "expect": "deny"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "all deny",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "inv",
+    "name": "no_loops"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "no loops",
+   "cost": 3.0
+  },
+  {
+   "test": {
+    "t": "inv",
+    "name": "mgmt_reachable"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "all managed devices reachable",
+   "cost": 3.0
+  },
+  {
+   "test": {
+    "t": "inv",
+    "name": "isolation"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "isolation holds",
+   "cost": 3.0
+  },
+  {
+   "test": {
+    "t": "inv",
+    "name": "no_leak"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "no internal prefixes leaked",
+   "cost": 3.0
+  }
+ ],
+ "llm_calls": 2,
+ "llm_seconds": 6.630000000000001,
+ "tokens_in": 3938,
+ "tokens_out": 791,
+ "cost_usd": 0.015785999999999998,
+ "tool_seconds": 43.0,
+ "compute_seconds": 0.062,
+ "replans": 0,
+ "coverage": 1.0,
+ "trace": [
+  {
+   "step": "intent_analyzer",
+   "prompt_chars": 330,
+   "response": {
+    "ticket_says": "On leaf3, add ACL entry '25 permit tcp 10.101.2.0/24 10.103.1.0/24 eq 5432' to ACL_DBA_OUT before the final deny, so that staging host stage-a1 can reach db-a1 on tcp/5432 and nothing else opens.",
+    "goal": "Allow the staging subnet to reach the database subnet on PostgreSQL (tcp/5432) via ACL_DBA_OUT on leaf3, specifically opening only stage-a1 -> db-a1 on tcp/5432.",
+    "change_type": "acl",
+    "scope": [
+     "leaf3",
+     "ACL_DBA_OUT",
+     "stage-a1",
+     "db-a1",
+     "10.101.2.0/24",
+     "10.103.1.0/24"
+    ],
+    "expected_effects": [
+     "stage-a1 can open tcp/5432 connections to db-a1 through leaf3",
+     "ACL_DBA_OUT contains a permit entry at sequence 25 for tcp 10.101.2.0/24 -> 10.103.1.0/24 eq 5432",
+     "The new entry is placed before the final deny in ACL_DBA_OUT"
+    ],
+    "must_not_change": [
+     "No other source/destination pairs or ports become permitted",
+     "Traffic other than stage-a1 -> db-a1 on tcp/5432 keeps its existing behavior",
+     "The final deny in ACL_DBA_OUT remains in effect for everything else"
+    ],
+    "confidence": "high"
+   },
+   "latency": 3.64,
+   "cached": true
+  },
+  {
+   "step": "impact_analyzer",
+   "entries": 1,
+   "behavioural": 1,
+   "impact": "I1 flow stage-a1 -> db-a1 svc tcp/5432: deny -> allow"
+  },
+  {
+   "step": "test_planner#0",
+   "prompt_chars": 3143,
+   "response": {
+    "labels": {
+     "I1": "intended"
+    },
+    "extra_tests": [
+     {
+      "t": "reach",
+      "src": "stage-a1",
+      "dst": "db-a1",
+      "svc": "tcp/5432",
+      "expect": "allow"
+     },
+     {
+      "t": "reach",
+      "src": "stage-a1",
+      "dst": "db-a1",
+      "svc": "tcp/22",
+      "expect": "unchanged"
+     },
+     {
+      "t": "reach",
+      "src": "stage-a1",
+      "dst": "db-a1",
+      "svc": "icmp",
+      "expect": "unchanged"
+     },
+     {
+      "t": "reach",
+      "src": "stage-b1",
+      "dst": "db-a1",
+      "svc": "tcp/5432",
+      "expect": "unchanged"
+     },
+     {
+      "t": "reach",
+      "src": "web-a1",
+      "dst": "db-a1",
+      "svc": "tcp/5432",
+      "expect": "unchanged"
+     },
+     {
+      "t": "reach",
+      "src": "wan-user1",
+      "dst": "db-a1",
+      "svc": "tcp/5432",
+      "expect": "deny"
+     }
+    ]
+   },
+   "latency": 2.99,
+   "cached": true
+  },
+  {
+   "step": "executor+judge#0",
+   "tests": 10,
+   "failed": 0,
+   "errors": 0,
+   "coverage": 1.0,
+   "unsure": []
+  }
+ ],
+ "ci_seconds": 49.63
+}

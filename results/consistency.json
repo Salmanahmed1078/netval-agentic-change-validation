@@ -1,0 +1,17 @@
+{
+ "agent_hosted": {
+  "fleiss_kappa": 0.9173478856435863,
+  "unanimous": 0.9195402298850575,
+  "repeats": [
+   1,
+   2,
+   3
+  ],
+  "majority_vote": {
+   "detection": 0.9481481481481482,
+   "false_approval": 0.05185185185185185,
+   "false_block": 0.03968253968253968,
+   "escalation_rate": 0.2988505747126437
+  }
+ }
+}

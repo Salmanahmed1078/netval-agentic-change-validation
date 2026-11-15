@@ -1,0 +1,1 @@
+Staging needs database access: on leaf3 add '25 permit tcp 10.101.2.0/24 10.103.1.0/24 eq 5432' to ACL_DBA_OUT (before the final deny). Only stage-a1 -> db-a1 on tcp/5432 should open.

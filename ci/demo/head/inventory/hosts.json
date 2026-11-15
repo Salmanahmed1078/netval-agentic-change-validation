@@ -1,0 +1,123 @@
+[
+ {
+  "attach": [
+   "wan",
+   "eth1"
+  ],
+  "group": "wan",
+  "gw": "198.18.0.1",
+  "ip": "198.18.0.10/24",
+  "mtu": 1500,
+  "name": "wan-user1"
+ },
+ {
+  "attach": [
+   "leaf1",
+   "ge1"
+  ],
+  "group": "tenantA-web",
+  "gw": "10.101.1.1",
+  "ip": "10.101.1.10/24",
+  "mtu": 9000,
+  "name": "web-a1"
+ },
+ {
+  "attach": [
+   "leaf1",
+   "ge2"
+  ],
+  "group": "tenantA-stage",
+  "gw": "10.101.2.1",
+  "ip": "10.101.2.10/24",
+  "mtu": 9000,
+  "name": "stage-a1"
+ },
+ {
+  "attach": [
+   "leaf2",
+   "ge1"
+  ],
+  "group": "tenantA-app",
+  "gw": "10.102.1.1",
+  "ip": "10.102.1.10/24",
+  "mtu": 9000,
+  "name": "app-a1"
+ },
+ {
+  "attach": [
+   "leaf3",
+   "ge1"
+  ],
+  "group": "tenantA-db",
+  "gw": "10.103.1.1",
+  "ip": "10.103.1.10/24",
+  "mtu": 9000,
+  "name": "db-a1"
+ },
+ {
+  "attach": [
+   "leaf4",
+   "ge1"
+  ],
+  "group": "tenantB-web",
+  "gw": "10.201.1.1",
+  "ip": "10.201.1.10/24",
+  "mtu": 9000,
+  "name": "web-b1"
+ },
+ {
+  "attach": [
+   "leaf4",
+   "ge2"
+  ],
+  "group": "tenantB-stage",
+  "gw": "10.201.2.1",
+  "ip": "10.201.2.10/24",
+  "mtu": 9000,
+  "name": "stage-b1"
+ },
+ {
+  "attach": [
+   "leaf5",
+   "ge1"
+  ],
+  "group": "tenantB-db",
+  "gw": "10.203.1.1",
+  "ip": "10.203.1.10/24",
+  "mtu": 9000,
+  "name": "db-b1"
+ },
+ {
+  "attach": [
+   "leaf6",
+   "ge1"
+  ],
+  "group": "shared-dns",
+  "gw": "10.30.0.1",
+  "ip": "10.30.0.10/24",
+  "mtu": 9000,
+  "name": "dns-dc1"
+ },
+ {
+  "attach": [
+   "leaf6",
+   "ge2"
+  ],
+  "group": "shared-backup",
+  "gw": "10.31.0.1",
+  "ip": "10.31.0.10/24",
+  "mtu": 9000,
+  "name": "backup1"
+ },
+ {
+  "attach": [
+   "oob",
+   "eth3"
+  ],
+  "group": "noc",
+  "gw": "10.99.0.1",
+  "ip": "10.99.0.10/24",
+  "mtu": 1500,
+  "name": "noc1"
+ }
+]

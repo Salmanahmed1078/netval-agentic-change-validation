@@ -1,0 +1,342 @@
+{
+ "verdict": "block",
+ "reason": "{\"t\": \"reach\", \"src\": \"stage-a1\", \"dst\": \"db-a1\", \"svc\": \"*\", \"expect\": \"unchanged\"} -> changed {'icmp': (False, True), 'tcp/22': (False, True), 'tcp/25': (False, True), 'tcp/80'; {\"t\": \"reach\", \"src\": \"stage-a1\", \"dst\": \"db-a1\", \"svc\": \"icmp\", \"expect\": \"deny\"} -> violations ['icmp'] (ACCEPTED ); {\"t\": \"reach\", \"src\": \"stage-a1\", \"dst\": \"db-a1\", \"svc\": \"tcp/22\", \"expect\": \"deny\"} -> violations ['tcp/22'] (ACCEPTED )",
+ "tests": [
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "*",
+   "expect": "unchanged"
+  },
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "tcp/5432",
+   "expect": "allow"
+  },
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "icmp",
+   "expect": "deny"
+  },
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "tcp/22",
+   "expect": "deny"
+  },
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "tcp/80",
+   "expect": "deny"
+  },
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "tcp/443",
+   "expect": "deny"
+  },
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "tcp/25",
+   "expect": "deny"
+  },
+  {
+   "t": "reach",
+   "src": "stage-a1",
+   "dst": "db-a1",
+   "svc": "udp/53",
+   "expect": "deny"
+  },
+  {
+   "t": "inv",
+   "name": "no_loops"
+  },
+  {
+   "t": "inv",
+   "name": "mgmt_reachable"
+  },
+  {
+   "t": "inv",
+   "name": "isolation"
+  },
+  {
+   "t": "inv",
+   "name": "no_leak"
+  }
+ ],
+ "results": [
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "*",
+    "expect": "unchanged"
+   },
+   "status": "fail",
+   "tier": "t1",
+   "detail": "changed {'icmp': (False, True), 'tcp/22': (False, True), 'tcp/25': (False, True), 'tcp/80': (False, True), 'tcp/443': (False, True), 'tcp/5432': (False, True), 'udp/53': (False, True)}",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "tcp/5432",
+    "expect": "allow"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "all allow",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "icmp",
+    "expect": "deny"
+   },
+   "status": "fail",
+   "tier": "t1",
+   "detail": "violations ['icmp'] (ACCEPTED )",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "tcp/22",
+    "expect": "deny"
+   },
+   "status": "fail",
+   "tier": "t1",
+   "detail": "violations ['tcp/22'] (ACCEPTED )",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "tcp/80",
+    "expect": "deny"
+   },
+   "status": "fail",
+   "tier": "t1",
+   "detail": "violations ['tcp/80'] (ACCEPTED )",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "tcp/443",
+    "expect": "deny"
+   },
+   "status": "fail",
+   "tier": "t1",
+   "detail": "violations ['tcp/443'] (ACCEPTED )",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "tcp/25",
+    "expect": "deny"
+   },
+   "status": "fail",
+   "tier": "t1",
+   "detail": "violations ['tcp/25'] (ACCEPTED )",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "reach",
+    "src": "stage-a1",
+    "dst": "db-a1",
+    "svc": "udp/53",
+    "expect": "deny"
+   },
+   "status": "fail",
+   "tier": "t1",
+   "detail": "violations ['udp/53'] (ACCEPTED )",
+   "cost": 1.0
+  },
+  {
+   "test": {
+    "t": "inv",
+    "name": "no_loops"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "no loops",
+   "cost": 3.0
+  },
+  {
+   "test": {
+    "t": "inv",
+    "name": "mgmt_reachable"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "all managed devices reachable",
+   "cost": 3.0
+  },
+  {
+   "test": {
+    "t": "inv",
+    "name": "isolation"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "isolation holds",
+   "cost": 3.0
+  },
+  {
+   "test": {
+    "t": "inv",
+    "name": "no_leak"
+   },
+   "status": "pass",
+   "tier": "t1",
+   "detail": "no internal prefixes leaked",
+   "cost": 3.0
+  }
+ ],
+ "llm_calls": 2,
+ "llm_seconds": 5.92,
+ "tokens_in": 3962,
+ "tokens_out": 842,
+ "cost_usd": 0.016343999999999997,
+ "tool_seconds": 45.0,
+ "compute_seconds": 0.069,
+ "replans": 0,
+ "coverage": 1.0,
+ "trace": [
+  {
+   "step": "intent_analyzer",
+   "prompt_chars": 311,
+   "response": {
+    "ticket_says": "On leaf3, add ACL entry '25 permit tcp 10.101.2.0/24 10.103.1.0/24 eq 5432' to ACL_DBA_OUT, positioned before the final deny, so that only stage-a1 can reach db-a1 on tcp/5432.",
+    "goal": "Allow the staging host stage-a1 (10.101.2.0/24) to reach the database host db-a1 (10.103.1.0/24) on TCP port 5432 through ACL_DBA_OUT on leaf3, without opening anything else.",
+    "change_type": "acl",
+    "scope": [
+     "leaf3",
+     "ACL_DBA_OUT",
+     "stage-a1",
+     "db-a1",
+     "10.101.2.0/24",
+     "10.103.1.0/24"
+    ],
+    "expected_effects": [
+     "stage-a1 (10.101.2.0/24) can open TCP connections to db-a1 (10.103.1.0/24) on port 5432",
+     "ACL_DBA_OUT on leaf3 contains a new entry at sequence 25: permit tcp 10.101.2.0/24 10.103.1.0/24 eq 5432",
+     "The new entry is placed before the final deny in ACL_DBA_OUT"
+    ],
+    "must_not_change": [
+     "No other source, destination, protocol, or port is newly permitted by ACL_DBA_OUT",
+     "The final deny entry in ACL_DBA_OUT remains in effect for all other traffic",
+     "Existing ACL entries and other devices are unchanged"
+    ],
+    "confidence": "high"
+   },
+   "latency": 3.52,
+   "cached": true
+  },
+  {
+   "step": "impact_analyzer",
+   "entries": 1,
+   "behavioural": 1,
+   "impact": "I1 flow stage-a1 -> db-a1 svc ALL (icmp, tcp/22, tcp/25, tcp/80, tcp/443, tcp/5432, udp/53): deny -> allow"
+  },
+  {
+   "step": "test_planner#0",
+   "prompt_chars": 3210,
+   "response": {
+    "labels": {
+     "I1": "unintended"
+    },
+    "extra_tests": [
+     {
+      "t": "reach",
+      "src": "stage-a1",
+      "dst": "db-a1",
+      "svc": "tcp/5432",
+      "expect": "allow"
+     },
+     {
+      "t": "reach",
+      "src": "stage-a1",
+      "dst": "db-a1",
+      "svc": "icmp",
+      "expect": "deny"
+     },
+     {
+      "t": "reach",
+      "src": "stage-a1",
+      "dst": "db-a1",
+      "svc": "tcp/22",
+      "expect": "deny"
+     },
+     {
+      "t": "reach",
+      "src": "stage-a1",
+      "dst": "db-a1",
+      "svc": "tcp/80",
+      "expect": "deny"
+     },
+     {
+      "t": "reach",
+      "src": "stage-a1",
+      "dst": "db-a1",
+      "svc": "tcp/443",
+      "expect": "deny"
+     },
+     {
+      "t": "reach",
+      "src": "stage-a1",
+      "dst": "db-a1",
+      "svc": "tcp/25",
+      "expect": "deny"
+     },
+     {
+      "t": "reach",
+      "src": "stage-a1",
+      "dst": "db-a1",
+      "svc": "udp/53",
+      "expect": "deny"
+     }
+    ]
+   },
+   "latency": 2.4,
+   "cached": true
+  },
+  {
+   "step": "executor+judge#0",
+   "tests": 12,
+   "failed": 7,
+   "errors": 0,
+   "coverage": 1.0,
+   "unsure": []
+  }
+ ],
+ "ci_seconds": 50.92
+}

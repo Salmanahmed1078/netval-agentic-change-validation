@@ -1,0 +1,497 @@
+[
+ {
+  "case": "D-ACL-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-ACL-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-ACL-2-F",
+  "intent": "vague",
+  "label": "unsafe",
+  "verdict": "approve",
+  "variant": "over_broad_rule",
+  "category": "Intent misread (side effect labelled intended)",
+  "reason": "all 5 tests passed, coverage 100%"
+ },
+ {
+  "case": "D-ACL-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-STA-1-F",
+  "intent": "clear",
+  "label": "unsafe",
+  "verdict": "approve",
+  "variant": "static_pin_breaks_failover",
+  "category": "Missed dependency (Tier-2 risk not flagged by impact analysis)",
+  "reason": "all 14 tests passed, coverage 100%"
+ },
+ {
+  "case": "D-STA-1-F",
+  "intent": "vague",
+  "label": "unsafe",
+  "verdict": "approve",
+  "variant": "static_pin_breaks_failover",
+  "category": "Missed dependency (Tier-2 risk not flagged by impact analysis)",
+  "reason": "all 13 tests passed, coverage 100%"
+ },
+ {
+  "case": "D-STA-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-OSPF-1-S",
+  "intent": "clear",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I4', 'I5', 'I6'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-OSPF-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4', 'I5'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-OSPF-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-OSPF-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-BGP-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-BGP-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-BGP-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-VLAN-1-S",
+  "intent": "vague",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-VLAN-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-VLAN-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-VLAN-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-MTU-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-MTU-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-MTU-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-MNT-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4', 'I5'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-MNT-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4', 'I5'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-RED-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-RED-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "D-RED-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-ACL-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4', 'I5'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-ACL-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-ACL-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-STA-1-F",
+  "intent": "vague",
+  "label": "unsafe",
+  "verdict": "approve",
+  "variant": "static_pin_breaks_failover",
+  "category": "Missed dependency (Tier-2 risk not flagged by impact analysis)",
+  "reason": "all 11 tests passed, coverage 100%"
+ },
+ {
+  "case": "I-STA-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-STA-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-OSPF-1-S",
+  "intent": "vague",
+  "label": "safe",
+  "verdict": "block",
+  "variant": "safe",
+  "category": "Bad test (wrong expectation on intended effect)",
+  "reason": "{\"t\": \"path\", \"src\": \"c1-host\", \"dst\": \"ext-dns1\", \"via\": \"CHM\", \"expect\": true} -> paths [['c1-host', 'cust1', 'SEA', 'SDG', 'HOU', 'ATL', 'PIT', 'peer1', 'ext-dns1']]"
+ },
+ {
+  "case": "I-OSPF-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4', 'I5'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-OSPF-2-S",
+  "intent": "clear",
+  "label": "safe",
+  "verdict": "block",
+  "variant": "safe",
+  "category": "Bad test (wrong expectation on intended effect)",
+  "reason": "{\"t\": \"path\", \"src\": \"c2-host\", \"dst\": \"ext-dns2\", \"via\": \"SDG\", \"expect\": true} -> paths [['c2-host', 'cust2', 'ATL', 'HOU', 'BOU', 'SLC', 'PAO', 'peer2', 'ext-dns2'], ['c2-; {\"t\": \"path\", \"src\": \"c1"
+ },
+ {
+  "case": "I-OSPF-2-S",
+  "intent": "vague",
+  "label": "safe",
+  "verdict": "block",
+  "variant": "safe",
+  "category": "Bad test (wrong expectation on intended effect)",
+  "reason": "{\"t\": \"path\", \"src\": \"c2-host\", \"dst\": \"ext-dns2\", \"via\": \"SDG\", \"expect\": true} -> paths [['c2-host', 'cust2', 'ATL', 'HOU', 'BOU', 'SLC', 'PAO', 'peer2', 'ext-dns2'], ['c2-; {\"t\": \"path\", \"src\": \"c1"
+ },
+ {
+  "case": "I-OSPF-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4', 'I5'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-OSPF-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-BGP-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-BGP-1-F",
+  "intent": "vague",
+  "label": "unsafe",
+  "verdict": "approve",
+  "variant": "prefix_list_typo",
+  "category": "Intent misread (side effect labelled intended)",
+  "reason": "all 5 tests passed, coverage 100%"
+ },
+ {
+  "case": "I-BGP-2-S",
+  "intent": "vague",
+  "label": "safe",
+  "verdict": "block",
+  "variant": "safe",
+  "category": "Bad test (wrong expectation on intended effect)",
+  "reason": "{\"t\": \"reach\", \"src\": \"c2-host\", \"dst\": \"ext-dns2\", \"svc\": \"*\", \"expect\": \"unchanged\"} -> changed {'icmp': (True, False), 'tcp/22': (True, False), 'tcp/25': (True, False), 'tcp/80'"
+ },
+ {
+  "case": "I-BGP-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-BGP-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-VLAN-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-VLAN-2-S",
+  "intent": "clear",
+  "label": "safe",
+  "verdict": "block",
+  "variant": "safe",
+  "category": "Bad test (wrong expectation on intended effect)",
+  "reason": "{\"t\": \"reach\", \"src\": \"c1-host\", \"dst\": \"noc2\", \"svc\": \"*\", \"expect\": \"unchanged\"} -> changed {'icmp': (False, True), 'tcp/22': (False, True), 'tcp/25': (False, True), 'tcp/80'; {\"t\": \"reach\", \"src\": "
+ },
+ {
+  "case": "I-VLAN-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-VLAN-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-MTU-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-MTU-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-MTU-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-MNT-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-MNT-3-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4', 'I5'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-RED-1-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1'] are intended (ambiguous ticket)"
+ },
+ {
+  "case": "I-RED-2-S",
+  "intent": "vague",
+  "label": "safe",
+  "verdict": "block",
+  "variant": "safe",
+  "category": "Bad test (wrong expectation on intended effect)",
+  "reason": "{\"t\": \"route\", \"dev\": \"CPK\", \"prefix\": \"172.16.3.0/24\", \"expect\": \"absent\"} -> present"
+ },
+ {
+  "case": "I-RED-2-S",
+  "intent": "terse",
+  "label": "safe",
+  "verdict": "escalate",
+  "variant": "safe",
+  "category": "Escalated: ambiguous ticket (by design)",
+  "reason": "agent unsure whether ['I1', 'I2', 'I3', 'I4'] are intended (ambiguous ticket)"
+ }
+]

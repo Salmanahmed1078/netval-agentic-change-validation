@@ -1,0 +1,120 @@
+{
+ "invariants": {
+  "isolation": [
+   [
+    "web-a1",
+    "web-b1"
+   ],
+   [
+    "app-a1",
+    "db-b1"
+   ],
+   [
+    "web-b1",
+    "db-a1"
+   ],
+   [
+    "stage-b1",
+    "app-a1"
+   ],
+   [
+    "wan-user1",
+    "db-a1"
+   ],
+   [
+    "wan-user1",
+    "noc1"
+   ]
+  ],
+  "mgmt_reachable": {
+   "src": "noc1",
+   "targets": [
+    "spine1",
+    "spine2",
+    "leaf1",
+    "leaf2",
+    "leaf3",
+    "leaf4",
+    "leaf5",
+    "leaf6",
+    "border1",
+    "border2"
+   ]
+  },
+  "no_leak": {
+   "externals": [
+    "wan"
+   ],
+   "forbidden": [
+    "10.99.0.0/24",
+    "10.103.1.0/24",
+    "10.203.1.0/24",
+    "10.0.0.0/16"
+   ]
+  },
+  "no_loops": true
+ },
+ "name": "datacenter",
+ "redundant_links": [
+  [
+   "leaf1",
+   "spine1"
+  ],
+  [
+   "leaf1",
+   "spine2"
+  ],
+  [
+   "leaf2",
+   "spine1"
+  ],
+  [
+   "leaf2",
+   "spine2"
+  ],
+  [
+   "leaf3",
+   "spine1"
+  ],
+  [
+   "leaf3",
+   "spine2"
+  ],
+  [
+   "leaf4",
+   "spine1"
+  ],
+  [
+   "leaf4",
+   "spine2"
+  ],
+  [
+   "leaf5",
+   "spine1"
+  ],
+  [
+   "leaf5",
+   "spine2"
+  ],
+  [
+   "leaf6",
+   "spine1"
+  ],
+  [
+   "leaf6",
+   "spine2"
+  ],
+  [
+   "border1",
+   "spine1"
+  ],
+  [
+   "border2",
+   "spine2"
+  ]
+ ],
+ "sla": {
+  "convergence_max_s": 3.0,
+  "link_util_max_pct": 90.0
+ }
+}
