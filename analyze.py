@@ -48,6 +48,7 @@ def get(method, intents=("clear", "vague", "terse"), test_only=True, mode="first
 def save(fig, name):
     fig.tight_layout()
     fig.savefig(f"figures/{name}.png", bbox_inches="tight")
+    fig.savefig(f"figures/{name}.pdf", bbox_inches="tight")
     plt.close(fig)
 
 
