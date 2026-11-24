@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 452" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5B6677"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E8A5A"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C2372E"/>
+    </marker>
+    <style>
+      .dg-shadow { fill: #E4E9F0; }
+      .dg-card { fill: #FFFFFF; stroke: #D3DAE4; stroke-width: 1.5; }
+      .dg-lab { font-size: 15px; font-weight: 700; letter-spacing: 1.6px; fill: #5B6677; }
+      .dg-hl { font-size: 15px; font-weight: 700; letter-spacing: 1.4px; fill: #FFFFFF; }
+      .dg-num { font-size: 17px; font-weight: 700; }
+      .dg-ti { font-size: 25px; font-weight: 700; fill: #0E1A2B; }
+      .dg-de { font-size: 18px; fill: #4A5568; }
+      .dg-it { font-size: 19px; font-weight: 700; fill: #0E1A2B; }
+      .dg-is { font-size: 15.5px; fill: #5B6677; }
+      .dg-flow { stroke: #5B6677; stroke-width: 2.4; fill: none; }
+      .dg-vt { font-size: 19px; font-weight: 700; letter-spacing: 1.2px; fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <!-- ===================== INPUTS ===================== -->
+  <text class="dg-lab" x="0" y="36">INPUTS</text>
+  <rect class="dg-shadow" x="3" y="53" width="200" height="62" rx="10"/>
+  <rect class="dg-card" x="0" y="50" width="200" height="62" rx="10"/>
+  <rect x="0" y="50" width="6" height="62" rx="3" fill="#123A6B"/>
+  <text class="dg-it" x="18" y="76">Change ticket</text>
+  <text class="dg-is" x="18" y="99">clear · vague · terse</text>
+
+  <rect class="dg-shadow" x="3" y="132" width="200" height="62" rx="10"/>
+  <rect class="dg-card" x="0" y="129" width="200" height="62" rx="10"/>
+  <rect x="0" y="129" width="6" height="62" rx="3" fill="#123A6B"/>
+  <text class="dg-it" x="18" y="155">Config diff</text>
+  <text class="dg-is" x="18" y="178">Git pull request</text>
+
+  <rect class="dg-shadow" x="3" y="211" width="200" height="62" rx="10"/>
+  <rect class="dg-card" x="0" y="208" width="200" height="62" rx="10"/>
+  <rect x="0" y="208" width="6" height="62" rx="3" fill="#123A6B"/>
+  <text class="dg-it" x="18" y="234">Network snapshot</text>
+  <text class="dg-is" x="18" y="257">topology + configs</text>
+  <path class="dg-flow" d="M200,81 H214 V239 H200 M214,160 H230" marker-end="url(#a)"/>
+
+  <!-- ===================== REPLAN LOOP ===================== -->
+  <path d="M1090.5,48 V30 Q1090.5,20 1080.5,20 H714.5 Q704.5,20 704.5,30 V46" stroke="#C2372E" stroke-width="2.4" stroke-dasharray="8 6" fill="none" marker-end="url(#ar)"/>
+  <rect x="772" y="8" width="252" height="25" rx="12.5" fill="#FFFFFF" stroke="#F0C9C5" stroke-width="1.2"/>
+  <text x="898" y="26" text-anchor="middle" font-size="15" font-style="italic" fill="#C2372E">evidence missing → replan (max 3)</text>
+
+  <!-- ===================== STAGES ===================== -->
+  <rect class="dg-shadow" x="237" y="54" width="169" height="220" rx="12"/>
+  <rect class="dg-card" x="234" y="50" width="169" height="220" rx="12"/>
+  <rect x="234" y="50" width="169" height="46" rx="12" fill="#2F6FDE"/><rect x="234" y="80" width="169" height="16" fill="#2F6FDE"/>
+  <circle cx="259" cy="73" r="14" fill="#FFFFFF"/><text class="dg-num" x="259" y="79" text-anchor="middle" fill="#2F6FDE">1</text>
+  <text class="dg-hl" x="282" y="79">LLM</text>
+  <text class="dg-ti" x="248" y="132">Intent</text><text class="dg-ti" x="248" y="160">analyzer</text>
+  <text class="dg-de" x="248" y="198">What does the</text><text class="dg-de" x="248" y="221">ticket ask for,</text><text class="dg-de" x="248" y="244">how confident?</text>
+
+  <rect class="dg-shadow" x="430" y="54" width="169" height="220" rx="12"/>
+  <rect class="dg-card" x="427" y="50" width="169" height="220" rx="12"/>
+  <rect x="427" y="50" width="169" height="46" rx="12" fill="#1E8A5A"/><rect x="427" y="80" width="169" height="16" fill="#1E8A5A"/>
+  <circle cx="452" cy="73" r="14" fill="#FFFFFF"/><text class="dg-num" x="452" y="79" text-anchor="middle" fill="#1E8A5A">2</text>
+  <text class="dg-hl" x="475" y="79">TWIN</text>
+  <text class="dg-ti" x="441" y="132">Impact</text><text class="dg-ti" x="441" y="160">analyzer</text>
+  <text class="dg-de" x="441" y="198">What actually</text><text class="dg-de" x="441" y="221">changed? Exact</text><text class="dg-de" x="441" y="244">blast radius</text>
+
+  <rect class="dg-shadow" x="623" y="54" width="169" height="220" rx="12"/>
+  <rect class="dg-card" x="620" y="50" width="169" height="220" rx="12"/>
+  <rect x="620" y="50" width="169" height="46" rx="12" fill="#2F6FDE"/><rect x="620" y="80" width="169" height="16" fill="#2F6FDE"/>
+  <circle cx="645" cy="73" r="14" fill="#FFFFFF"/><text class="dg-num" x="645" y="79" text-anchor="middle" fill="#2F6FDE">3</text>
+  <text class="dg-hl" x="668" y="79">LLM</text>
+  <text class="dg-ti" x="634" y="132">Test</text><text class="dg-ti" x="634" y="160">planner</text>
+  <text class="dg-de" x="634" y="198">Was each change</text><text class="dg-de" x="634" y="221">intended? Labels</text><text class="dg-de" x="634" y="244">become tests</text>
+
+  <rect class="dg-shadow" x="816" y="54" width="169" height="220" rx="12"/>
+  <rect class="dg-card" x="813" y="50" width="169" height="220" rx="12"/>
+  <rect x="813" y="50" width="169" height="46" rx="12" fill="#1E8A5A"/><rect x="813" y="80" width="169" height="16" fill="#1E8A5A"/>
+  <circle cx="838" cy="73" r="14" fill="#FFFFFF"/><text class="dg-num" x="838" y="79" text-anchor="middle" fill="#1E8A5A">4</text>
+  <text class="dg-hl" x="861" y="79">TWIN</text>
+  <text class="dg-ti" x="827" y="132">Test</text><text class="dg-ti" x="827" y="160">executor</text>
+  <text class="dg-de" x="827" y="198">Runs every test</text><text class="dg-de" x="827" y="221">on the cheapest</text><text class="dg-de" x="827" y="244">twin tier</text>
+
+  <rect class="dg-shadow" x="1009" y="54" width="169" height="220" rx="12"/>
+  <rect class="dg-card" x="1006" y="50" width="169" height="220" rx="12" stroke="#E07A1F" stroke-width="2"/>
+  <rect x="1006" y="50" width="169" height="46" rx="12" fill="#E07A1F"/><rect x="1006" y="80" width="169" height="16" fill="#E07A1F"/>
+  <circle cx="1031" cy="73" r="14" fill="#FFFFFF"/><text class="dg-num" x="1031" y="79" text-anchor="middle" fill="#E07A1F">5</text>
+  <text class="dg-hl" x="1054" y="79">RULES</text>
+  <text class="dg-ti" x="1020" y="132">Evidence</text><text class="dg-ti" x="1020" y="160">judge</text>
+  <text class="dg-de" x="1020" y="198">Plain code, never</text><text class="dg-de" x="1020" y="221">the LLM, makes</text><text class="dg-de" x="1020" y="244">the final call</text>
+
+  <path class="dg-flow" d="M405,160 H423" marker-end="url(#a)"/>
+  <path class="dg-flow" d="M598,160 H616" marker-end="url(#a)"/>
+  <path class="dg-flow" d="M791,160 H809" marker-end="url(#a)"/>
+  <path class="dg-flow" d="M984,160 H1002" marker-end="url(#a)"/>
+
+  <!-- ===================== DIGITAL TWIN ===================== -->
+  <rect x="427" y="306" width="555" height="138" rx="12" fill="#EEF7F1" stroke="#1E8A5A" stroke-width="1.8"/>
+  <text x="445" y="336" font-size="15" font-weight="700" letter-spacing="1.6" fill="#1E8A5A">NETWORK DIGITAL TWIN</text>
+  <rect x="445" y="350" width="255" height="80" rx="9" fill="#FFFFFF" stroke="#B9DCC8" stroke-width="1.4"/>
+  <text x="461" y="377" font-size="19" font-weight="700" fill="#0E1A2B">Tier 1 · static</text>
+  <text class="dg-is" x="461" y="399">routing, ACL, NAT, BGP,</text>
+  <text class="dg-is" x="461" y="419">all-pairs reachability</text>
+  <rect x="712" y="350" width="255" height="80" rx="9" fill="#FFFFFF" stroke="#B9DCC8" stroke-width="1.4"/>
+  <text x="728" y="377" font-size="19" font-weight="700" fill="#0E1A2B">Tier 2 · emulation</text>
+  <text class="dg-is" x="728" y="399">MTU probes, failover</text>
+  <text class="dg-is" x="728" y="419">timing, link load</text>
+  <path d="M511.5,304 V277" stroke="#1E8A5A" stroke-width="2.4" fill="none" marker-end="url(#ag)"/>
+  <text x="522" y="296" font-size="14" fill="#1E8A5A" font-style="italic">before vs after</text>
+  <path d="M897.5,277 V304" stroke="#1E8A5A" stroke-width="2.4" fill="none" marker-start="url(#ag)" marker-end="url(#ag)"/>
+  <text x="908" y="296" font-size="14" fill="#1E8A5A" font-style="italic">runs tests</text>
+
+  <!-- ===================== LEGEND ===================== -->
+  <text class="dg-lab" x="0" y="336">LEGEND</text>
+  <rect x="0" y="352" width="18" height="18" rx="4" fill="#2F6FDE"/><text class="dg-is" x="28" y="367" fill="#0E1A2B">LLM: reads language</text>
+  <rect x="0" y="384" width="18" height="18" rx="4" fill="#1E8A5A"/><text class="dg-is" x="28" y="399" fill="#0E1A2B">Deterministic code</text>
+  <rect x="0" y="416" width="18" height="18" rx="4" fill="#E07A1F"/><text class="dg-is" x="28" y="431" fill="#0E1A2B">Fixed rules decide</text>
+
+  <!-- ===================== VERDICTS ===================== -->
+  <text class="dg-lab" x="1205" y="36">VERDICT</text>
+  <path class="dg-flow" d="M1177,160 H1189 M1189,81 V239"/>
+  <path class="dg-flow" d="M1189,81 H1201" marker-end="url(#a)"/>
+  <path class="dg-flow" d="M1189,160 H1201" marker-end="url(#a)"/>
+  <path class="dg-flow" d="M1189,239 H1201" marker-end="url(#a)"/>
+
+  <rect x="1205" y="52" width="195" height="58" rx="11" fill="#1E8A5A"/>
+  <circle cx="1233" cy="81" r="14" fill="#FFFFFF"/><path d="M1226,81 L1231,86 L1241,75" stroke="#1E8A5A" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="dg-vt" x="1257" y="88">APPROVE</text>
+
+  <rect x="1205" y="131" width="195" height="58" rx="11" fill="#C2372E"/>
+  <circle cx="1233" cy="160" r="14" fill="#FFFFFF"/><path d="M1227,154 L1239,166 M1239,154 L1227,166" stroke="#C2372E" stroke-width="3.2" stroke-linecap="round"/>
+  <text class="dg-vt" x="1257" y="167">BLOCK</text>
+
+  <rect x="1205" y="210" width="195" height="58" rx="11" fill="#D99A1E"/>
+  <circle cx="1233" cy="239" r="14" fill="#FFFFFF"/><path d="M1233,231 V241" stroke="#D99A1E" stroke-width="3.2" stroke-linecap="round"/><circle cx="1233" cy="247" r="2" fill="#D99A1E"/>
+  <text class="dg-vt" x="1257" y="246">ESCALATE</text>
+
+  <path class="dg-flow" d="M1302,270 V302" marker-end="url(#a)"/>
+  <rect x="1205" y="306" width="195" height="138" rx="12" fill="#F3F6FA" stroke="#123A6B" stroke-width="1.6"/>
+  <text x="1221" y="338" font-size="21" font-weight="700" fill="#0E1A2B">CI/CD gate</text>
+  <text class="dg-is" x="1221" y="370">exit code 0 / 1 / 2,</text>
+  <text class="dg-is" x="1221" y="394">every test and its</text>
+  <text class="dg-is" x="1221" y="418">evidence on the PR</text>
+</svg>

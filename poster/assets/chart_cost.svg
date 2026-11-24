@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="285.707395pt" height="157.651289pt" viewBox="0 0 285.707395 157.651289" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-24T16:28:14.284739</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 157.651289 
+L 285.707395 157.651289 
+L 285.707395 0 
+L 0 0 
+L 0 157.651289 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 77.313438 123.376328 
+L 265.970369 123.376328 
+L 265.970369 7.2 
+L 77.313438 7.2 
+L 77.313438 123.376328 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 77.313438 123.376328 
+L 77.313438 7.2 
+" clip-path="url(#p6823ca6a98)" style="fill: none; stroke: #e3e7ee; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m5644bca8af" d="M 0 0 
+L 0 3.5 
+" style="stroke: #5b6677; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m5644bca8af" x="77.313438" y="123.376328" style="fill: #5b6677; stroke: #5b6677; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: middle; fill: #5b6677" x="77.313438" y="136.751328" transform="rotate(-0 77.313438 136.751328)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 107.741975 123.376328 
+L 107.741975 7.2 
+" clip-path="url(#p6823ca6a98)" style="fill: none; stroke: #e3e7ee; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m5644bca8af" x="107.741975" y="123.376328" style="fill: #5b6677; stroke: #5b6677; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: middle; fill: #5b6677" x="107.741975" y="136.751328" transform="rotate(-0 107.741975 136.751328)">5</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 138.170512 123.376328 
+L 138.170512 7.2 
+" clip-path="url(#p6823ca6a98)" style="fill: none; stroke: #e3e7ee; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m5644bca8af" x="138.170512" y="123.376328" style="fill: #5b6677; stroke: #5b6677; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: middle; fill: #5b6677" x="138.170512" y="136.751328" transform="rotate(-0 138.170512 136.751328)">10</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 168.599049 123.376328 
+L 168.599049 7.2 
+" clip-path="url(#p6823ca6a98)" style="fill: none; stroke: #e3e7ee; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m5644bca8af" x="168.599049" y="123.376328" style="fill: #5b6677; stroke: #5b6677; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: middle; fill: #5b6677" x="168.599049" y="136.751328" transform="rotate(-0 168.599049 136.751328)">15</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 199.027587 123.376328 
+L 199.027587 7.2 
+" clip-path="url(#p6823ca6a98)" style="fill: none; stroke: #e3e7ee; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m5644bca8af" x="199.027587" y="123.376328" style="fill: #5b6677; stroke: #5b6677; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: middle; fill: #5b6677" x="199.027587" y="136.751328" transform="rotate(-0 199.027587 136.751328)">20</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 229.456124 123.376328 
+L 229.456124 7.2 
+" clip-path="url(#p6823ca6a98)" style="fill: none; stroke: #e3e7ee; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m5644bca8af" x="229.456124" y="123.376328" style="fill: #5b6677; stroke: #5b6677; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: middle; fill: #5b6677" x="229.456124" y="136.751328" transform="rotate(-0 229.456124 136.751328)">25</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 259.884661 123.376328 
+L 259.884661 7.2 
+" clip-path="url(#p6823ca6a98)" style="fill: none; stroke: #e3e7ee; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m5644bca8af" x="259.884661" y="123.376328" style="fill: #5b6677; stroke: #5b6677; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: middle; fill: #5b6677" x="259.884661" y="136.751328" transform="rotate(-0 259.884661 136.751328)">30</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: middle; fill: #5b6677" x="171.641903" y="148.570664" transform="rotate(-0 171.641903 148.570664)">Modelled CI time per change (min)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_15"/>
+     <g id="text_9">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: end; fill: #5b6677" x="73.813438" y="23.147405" transform="rotate(-0 73.813438 23.147405)">B1 Full suite</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_16"/>
+     <g id="text_10">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: end; fill: #5b6677" x="73.813438" y="45.811535" transform="rotate(-0 73.813438 45.811535)">B2 Rule-based</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_17"/>
+     <g id="text_11">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: end; fill: #5b6677" x="73.813438" y="68.475664" transform="rotate(-0 73.813438 68.475664)">B4 Static only</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_18"/>
+     <g id="text_12">
+      <text style="font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: end; fill: #5b6677" x="73.813438" y="91.139794" transform="rotate(-0 73.813438 91.139794)">B3 One-shot LLM</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_19"/>
+     <g id="text_13">
+      <text style="font-weight: 700; font-size: 8.5px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: end; fill: #0e1a2b" x="73.813438" y="113.803923" transform="rotate(-0 73.813438 113.803923)">NetVal</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 77.313438 27.439068 
+L 202.111245 27.439068 
+L 202.111245 12.480742 
+L 77.313438 12.480742 
+z
+" clip-path="url(#p6823ca6a98)" style="fill: #b9c2cf"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 77.313438 50.103197 
+L 88.305018 50.103197 
+L 88.305018 35.144872 
+L 77.313438 35.144872 
+z
+" clip-path="url(#p6823ca6a98)" style="fill: #98a3b3"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 77.313438 72.767327 
+L 81.979147 72.767327 
+L 81.979147 57.809001 
+L 77.313438 57.809001 
+z
+" clip-path="url(#p6823ca6a98)" style="fill: #7a8698"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 77.313438 95.431456 
+L 100.055505 95.431456 
+L 100.055505 80.473131 
+L 77.313438 80.473131 
+z
+" clip-path="url(#p6823ca6a98)" style="fill: #5e6b7e"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 77.313438 118.095586 
+L 91.882505 118.095586 
+L 91.882505 103.13726 
+L 77.313438 103.13726 
+z
+" clip-path="url(#p6823ca6a98)" style="fill: #e07a1f"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 77.313438 123.376328 
+L 77.313438 7.2 
+" style="fill: none; stroke: #c9d0da; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 77.313438 123.376328 
+L 265.970369 123.376328 
+" style="fill: none; stroke: #c9d0da; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.8px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: start; fill: #5b6677" x="203.936957" y="22.22221" transform="rotate(-0 203.936957 22.22221)">20.5 min · 1,559 tests</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 7.8px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: start; fill: #5b6677" x="90.13073" y="44.886339" transform="rotate(-0 90.13073 44.886339)">1.8 min · 120 tests</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7.8px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: start; fill: #5b6677" x="83.804859" y="67.550469" transform="rotate(-0 83.804859 67.550469)">0.8 min · 6 tests</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.8px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: start; fill: #5b6677" x="101.881217" y="90.214598" transform="rotate(-0 101.881217 90.214598)">3.7 min · 28 tests</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 7.8px; font-family: 'IBM Plex Sans', 'Helvetica', 'Arial', sans-serif; text-anchor: start; fill: #0e1a2b" x="93.708217" y="112.878728" transform="rotate(-0 93.708217 112.878728)">2.4 min · 12 tests</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6823ca6a98">
+   <rect x="77.313438" y="7.2" width="188.656931" height="116.176328"/>
+  </clipPath>
+ </defs>
+</svg>

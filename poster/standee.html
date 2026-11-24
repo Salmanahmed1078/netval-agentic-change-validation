@@ -1,0 +1,241 @@
+<!doctype html><html><head><meta charset="utf-8"><title>NetVal standee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+@page { size: 762mm 1524mm; margin: 0; }
+:root { --u: 3.6pt; }
+.page { width: 762mm; height: 1524mm; }
+.hdr { padding: 20mm 34mm 22mm; gap: 14mm; }
+.hdr .logo { width: 84mm; height: 84mm; }
+.hdr .ttl { flex: 1; }
+.hdr .kicker { font-size: 24pt; }
+.hdr h1 { font-size: 68pt; margin: 4mm 0 6mm; line-height: 1.08; }
+.hdr .authors { font-size: 36pt; }
+.hdr .affil { font-size: 22pt; margin-top: 3mm; line-height: 1.35; }
+.hdr .qrwrap { display: none; }
+.wrap { flex: 1; display: flex; flex-direction: column; gap: 11mm; padding: 13mm 34mm 0; min-height: 0; }
+.kpis { grid-template-columns: repeat(2, 1fr); gap: 8mm; }
+.kpi { padding: 8mm 11mm; gap: 10mm; }
+.kpi .big { font-size: 96pt; }
+.kpi .lab { font-size: 36pt; }
+.kpi .sub { font-size: 27pt; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 16mm; }
+.sec > h2 { font-size: 42pt; }
+.sec { font-size: 32pt; }
+.sec p, .sec li { line-height: 1.32; }
+figcaption { font-size: 25pt; color: var(--ink); }
+.big-ideas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10mm; }
+.big-ideas li { font-size: 30pt; margin: 0; }
+.sec table.t { font-size: 27pt; }
+.sec table.t th, .sec table.t td { padding: 2.6mm 4mm; }
+.ftr2 { background: var(--navy-deep); color: #fff; display: flex; align-items: center; gap: 16mm; padding: 14mm 34mm; margin-top: 13mm; position: relative; }
+.ftr2::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 10pt; background: var(--accent); }
+.ftr2 .qrbox { width: 88mm; height: 88mm; padding: 4mm; background: #fff; border-radius: 6mm; flex: none; }
+.ftr2 .qrbox svg { width: 100%; height: 100%; display: block; }
+.ftr2 .t1 { font-size: 36pt; font-weight: 700; }
+.ftr2 .t2 { font-size: 24pt; color: #C9D6E8; margin-top: 3mm; line-height: 1.35; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+</head><body><div class="page"><header class="hdr">
+  <div class="logo"><img src="assets/fast_logo.png" alt="FAST-NUCES"></div>
+  <div class="ttl">
+    <div class="kicker">FAST-NUCES Islamabad &nbsp;·&nbsp; Computer Networks Research Project &nbsp;·&nbsp; 2026</div>
+    <h1>Intent-Aware Agentic Validation of Network<br>Configuration Changes in CI/CD Pipelines<br>Using a Two&#8209;Tier Network Digital Twin</h1>
+    <div class="authors">Ahmed Tanweer &nbsp;·&nbsp; Salman Ahmad</div>
+    <div class="affil">Department of Artificial Intelligence and Data Science, National University of Computer and Emerging Sciences (FAST-NUCES), Islamabad, Pakistan<br>i233019@isb.nu.edu.pk &nbsp;·&nbsp; i236029@isb.nu.edu.pk</div>
+  </div>
+  <div class="qrwrap"><div class="qrbox qr"></div><div class="qrcap">Code, dataset<br>&amp; full paper</div></div>
+</header>
+<div class="wrap">
+<div class="kpis"><div class="kpi"><div class="big">97.8%</div><div><div class="lab">of unsafe changes caught</div><div class="sub">fixed full suite: 80.0%</div></div></div><div class="kpi hl"><div class="big">2.2%</div><div><div class="lab">unsafe changes approved</div><div class="sub">fixed full suite: 20.0%</div></div></div><div class="kpi"><div class="big">8.6×</div><div><div class="lab">faster, 128× fewer tests</div><div class="sub">2.4 vs 20.5 min per change</div></div></div><div class="kpi hl"><div class="big">0</div><div><div class="lab">unsafe approvals on ID-only tickets</div><div class="sub">86% sent to a human instead</div></div></div></div>
+<div class="two"><section class="sec "><h2><span class="n">01</span>The problem</h2><p>Configuration changes are a leading cause of network outages. Network CI/CD gates either run
+<b>every test</b> (slow, and they block 62% of correct changes) or a few <b>fixed rules</b> (they miss side effects).
+Neither knows what a change is <i>meant</i> to do.</p></section><section class="sec "><h2><span class="n">02</span>Research gap</h2><ol class="g">
+<li>No comparison with a fixed CI suite on the <b>same changes</b>.</li>
+<li><b>False approvals</b> of an LLM gate are not measured.</li>
+<li>Effect of <b>ticket quality</b> is unknown.</li>
+</ol></section></div>
+<section class="sec "><h2><span class="n">03</span>Method: the NetVal gate</h2><figure class="arch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 452" font-family="IBM Plex Sans, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5B6677"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E8A5A"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C2372E"/>
+    </marker>
+    <style>
+      .dg-shadow { fill: #E4E9F0; }
+      .dg-card { fill: #FFFFFF; stroke: #D3DAE4; stroke-width: 1.5; }
+      .dg-lab { font-size: 15px; font-weight: 700; letter-spacing: 1.6px; fill: #5B6677; }
+      .dg-hl { font-size: 15px; font-weight: 700; letter-spacing: 1.4px; fill: #FFFFFF; }
+      .dg-num { font-size: 17px; font-weight: 700; }
+      .dg-ti { font-size: 25px; font-weight: 700; fill: #0E1A2B; }
+      .dg-de { font-size: 18px; fill: #4A5568; }
+      .dg-it { font-size: 19px; font-weight: 700; fill: #0E1A2B; }
+      .dg-is { font-size: 15.5px; fill: #5B6677; }
+      .dg-flow { stroke: #5B6677; stroke-width: 2.4; fill: none; }
+      .dg-vt { font-size: 19px; font-weight: 700; letter-spacing: 1.2px; fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <!-- ===================== INPUTS ===================== -->
+  <text class="dg-lab" x="0" y="36">INPUTS</text>
+  <rect class="dg-shadow" x="3" y="53" width="200" height="62" rx="10"/>
+  <rect class="dg-card" x="0" y="50" width="200" height="62" rx="10"/>
+  <rect x="0" y="50" width="6" height="62" rx="3" fill="#123A6B"/>
+  <text class="dg-it" x="18" y="76">Change ticket</text>
+  <text class="dg-is" x="18" y="99">clear · vague · terse</text>
+
+  <rect class="dg-shadow" x="3" y="132" width="200" height="62" rx="10"/>
+  <rect class="dg-card" x="0" y="129" width="200" height="62" rx="10"/>
+  <rect x="0" y="129" width="6" height="62" rx="3" fill="#123A6B"/>
+  <text class="dg-it" x="18" y="155">Config diff</text>
+  <text class="dg-is" x="18" y="178">Git pull request</text>
+
+  <rect class="dg-shadow" x="3" y="211" width="200" height="62" rx="10"/>
+  <rect class="dg-card" x="0" y="208" width="200" height="62" rx="10"/>
+  <rect x="0" y="208" width="6" height="62" rx="3" fill="#123A6B"/>
+  <text class="dg-it" x="18" y="234">Network snapshot</text>
+  <text class="dg-is" x="18" y="257">topology + configs</text>
+  <path class="dg-flow" d="M200,81 H214 V239 H200 M214,160 H230" marker-end="url(#a)"/>
+
+  <!-- ===================== REPLAN LOOP ===================== -->
+  <path d="M1090.5,48 V30 Q1090.5,20 1080.5,20 H714.5 Q704.5,20 704.5,30 V46" stroke="#C2372E" stroke-width="2.4" stroke-dasharray="8 6" fill="none" marker-end="url(#ar)"/>
+  <rect x="772" y="8" width="252" height="25" rx="12.5" fill="#FFFFFF" stroke="#F0C9C5" stroke-width="1.2"/>
+  <text x="898" y="26" text-anchor="middle" font-size="15" font-style="italic" fill="#C2372E">evidence missing → replan (max 3)</text>
+
+  <!-- ===================== STAGES ===================== -->
+  <rect class="dg-shadow" x="237" y="54" width="169" height="220" rx="12"/>
+  <rect class="dg-card" x="234" y="50" width="169" height="220" rx="12"/>
+  <rect x="234" y="50" width="169" height="46" rx="12" fill="#2F6FDE"/><rect x="234" y="80" width="169" height="16" fill="#2F6FDE"/>
+  <circle cx="259" cy="73" r="14" fill="#FFFFFF"/><text class="dg-num" x="259" y="79" text-anchor="middle" fill="#2F6FDE">1</text>
+  <text class="dg-hl" x="282" y="79">LLM</text>
+  <text class="dg-ti" x="248" y="132">Intent</text><text class="dg-ti" x="248" y="160">analyzer</text>
+  <text class="dg-de" x="248" y="198">What does the</text><text class="dg-de" x="248" y="221">ticket ask for,</text><text class="dg-de" x="248" y="244">how confident?</text>
+
+  <rect class="dg-shadow" x="430" y="54" width="169" height="220" rx="12"/>
+  <rect class="dg-card" x="427" y="50" width="169" height="220" rx="12"/>
+  <rect x="427" y="50" width="169" height="46" rx="12" fill="#1E8A5A"/><rect x="427" y="80" width="169" height="16" fill="#1E8A5A"/>
+  <circle cx="452" cy="73" r="14" fill="#FFFFFF"/><text class="dg-num" x="452" y="79" text-anchor="middle" fill="#1E8A5A">2</text>
+  <text class="dg-hl" x="475" y="79">TWIN</text>
+  <text class="dg-ti" x="441" y="132">Impact</text><text class="dg-ti" x="441" y="160">analyzer</text>
+  <text class="dg-de" x="441" y="198">What actually</text><text class="dg-de" x="441" y="221">changed? Exact</text><text class="dg-de" x="441" y="244">blast radius</text>
+
+  <rect class="dg-shadow" x="623" y="54" width="169" height="220" rx="12"/>
+  <rect class="dg-card" x="620" y="50" width="169" height="220" rx="12"/>
+  <rect x="620" y="50" width="169" height="46" rx="12" fill="#2F6FDE"/><rect x="620" y="80" width="169" height="16" fill="#2F6FDE"/>
+  <circle cx="645" cy="73" r="14" fill="#FFFFFF"/><text class="dg-num" x="645" y="79" text-anchor="middle" fill="#2F6FDE">3</text>
+  <text class="dg-hl" x="668" y="79">LLM</text>
+  <text class="dg-ti" x="634" y="132">Test</text><text class="dg-ti" x="634" y="160">planner</text>
+  <text class="dg-de" x="634" y="198">Was each change</text><text class="dg-de" x="634" y="221">intended? Labels</text><text class="dg-de" x="634" y="244">become tests</text>
+
+  <rect class="dg-shadow" x="816" y="54" width="169" height="220" rx="12"/>
+  <rect class="dg-card" x="813" y="50" width="169" height="220" rx="12"/>
+  <rect x="813" y="50" width="169" height="46" rx="12" fill="#1E8A5A"/><rect x="813" y="80" width="169" height="16" fill="#1E8A5A"/>
+  <circle cx="838" cy="73" r="14" fill="#FFFFFF"/><text class="dg-num" x="838" y="79" text-anchor="middle" fill="#1E8A5A">4</text>
+  <text class="dg-hl" x="861" y="79">TWIN</text>
+  <text class="dg-ti" x="827" y="132">Test</text><text class="dg-ti" x="827" y="160">executor</text>
+  <text class="dg-de" x="827" y="198">Runs every test</text><text class="dg-de" x="827" y="221">on the cheapest</text><text class="dg-de" x="827" y="244">twin tier</text>
+
+  <rect class="dg-shadow" x="1009" y="54" width="169" height="220" rx="12"/>
+  <rect class="dg-card" x="1006" y="50" width="169" height="220" rx="12" stroke="#E07A1F" stroke-width="2"/>
+  <rect x="1006" y="50" width="169" height="46" rx="12" fill="#E07A1F"/><rect x="1006" y="80" width="169" height="16" fill="#E07A1F"/>
+  <circle cx="1031" cy="73" r="14" fill="#FFFFFF"/><text class="dg-num" x="1031" y="79" text-anchor="middle" fill="#E07A1F">5</text>
+  <text class="dg-hl" x="1054" y="79">RULES</text>
+  <text class="dg-ti" x="1020" y="132">Evidence</text><text class="dg-ti" x="1020" y="160">judge</text>
+  <text class="dg-de" x="1020" y="198">Plain code, never</text><text class="dg-de" x="1020" y="221">the LLM, makes</text><text class="dg-de" x="1020" y="244">the final call</text>
+
+  <path class="dg-flow" d="M405,160 H423" marker-end="url(#a)"/>
+  <path class="dg-flow" d="M598,160 H616" marker-end="url(#a)"/>
+  <path class="dg-flow" d="M791,160 H809" marker-end="url(#a)"/>
+  <path class="dg-flow" d="M984,160 H1002" marker-end="url(#a)"/>
+
+  <!-- ===================== DIGITAL TWIN ===================== -->
+  <rect x="427" y="306" width="555" height="138" rx="12" fill="#EEF7F1" stroke="#1E8A5A" stroke-width="1.8"/>
+  <text x="445" y="336" font-size="15" font-weight="700" letter-spacing="1.6" fill="#1E8A5A">NETWORK DIGITAL TWIN</text>
+  <rect x="445" y="350" width="255" height="80" rx="9" fill="#FFFFFF" stroke="#B9DCC8" stroke-width="1.4"/>
+  <text x="461" y="377" font-size="19" font-weight="700" fill="#0E1A2B">Tier 1 · static</text>
+  <text class="dg-is" x="461" y="399">routing, ACL, NAT, BGP,</text>
+  <text class="dg-is" x="461" y="419">all-pairs reachability</text>
+  <rect x="712" y="350" width="255" height="80" rx="9" fill="#FFFFFF" stroke="#B9DCC8" stroke-width="1.4"/>
+  <text x="728" y="377" font-size="19" font-weight="700" fill="#0E1A2B">Tier 2 · emulation</text>
+  <text class="dg-is" x="728" y="399">MTU probes, failover</text>
+  <text class="dg-is" x="728" y="419">timing, link load</text>
+  <path d="M511.5,304 V277" stroke="#1E8A5A" stroke-width="2.4" fill="none" marker-end="url(#ag)"/>
+  <text x="522" y="296" font-size="14" fill="#1E8A5A" font-style="italic">before vs after</text>
+  <path d="M897.5,277 V304" stroke="#1E8A5A" stroke-width="2.4" fill="none" marker-start="url(#ag)" marker-end="url(#ag)"/>
+  <text x="908" y="296" font-size="14" fill="#1E8A5A" font-style="italic">runs tests</text>
+
+  <!-- ===================== LEGEND ===================== -->
+  <text class="dg-lab" x="0" y="336">LEGEND</text>
+  <rect x="0" y="352" width="18" height="18" rx="4" fill="#2F6FDE"/><text class="dg-is" x="28" y="367" fill="#0E1A2B">LLM: reads language</text>
+  <rect x="0" y="384" width="18" height="18" rx="4" fill="#1E8A5A"/><text class="dg-is" x="28" y="399" fill="#0E1A2B">Deterministic code</text>
+  <rect x="0" y="416" width="18" height="18" rx="4" fill="#E07A1F"/><text class="dg-is" x="28" y="431" fill="#0E1A2B">Fixed rules decide</text>
+
+  <!-- ===================== VERDICTS ===================== -->
+  <text class="dg-lab" x="1205" y="36">VERDICT</text>
+  <path class="dg-flow" d="M1177,160 H1189 M1189,81 V239"/>
+  <path class="dg-flow" d="M1189,81 H1201" marker-end="url(#a)"/>
+  <path class="dg-flow" d="M1189,160 H1201" marker-end="url(#a)"/>
+  <path class="dg-flow" d="M1189,239 H1201" marker-end="url(#a)"/>
+
+  <rect x="1205" y="52" width="195" height="58" rx="11" fill="#1E8A5A"/>
+  <circle cx="1233" cy="81" r="14" fill="#FFFFFF"/><path d="M1226,81 L1231,86 L1241,75" stroke="#1E8A5A" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="dg-vt" x="1257" y="88">APPROVE</text>
+
+  <rect x="1205" y="131" width="195" height="58" rx="11" fill="#C2372E"/>
+  <circle cx="1233" cy="160" r="14" fill="#FFFFFF"/><path d="M1227,154 L1239,166 M1239,154 L1227,166" stroke="#C2372E" stroke-width="3.2" stroke-linecap="round"/>
+  <text class="dg-vt" x="1257" y="167">BLOCK</text>
+
+  <rect x="1205" y="210" width="195" height="58" rx="11" fill="#D99A1E"/>
+  <circle cx="1233" cy="239" r="14" fill="#FFFFFF"/><path d="M1233,231 V241" stroke="#D99A1E" stroke-width="3.2" stroke-linecap="round"/><circle cx="1233" cy="247" r="2" fill="#D99A1E"/>
+  <text class="dg-vt" x="1257" y="246">ESCALATE</text>
+
+  <path class="dg-flow" d="M1302,270 V302" marker-end="url(#a)"/>
+  <rect x="1205" y="306" width="195" height="138" rx="12" fill="#F3F6FA" stroke="#123A6B" stroke-width="1.6"/>
+  <text x="1221" y="338" font-size="21" font-weight="700" fill="#0E1A2B">CI/CD gate</text>
+  <text class="dg-is" x="1221" y="370">exit code 0 / 1 / 2,</text>
+  <text class="dg-is" x="1221" y="394">every test and its</text>
+  <text class="dg-is" x="1221" y="418">evidence on the PR</text>
+</svg>
+</figure><div style="margin-top:8mm"><ul class="b big-ideas">
+<li><b>The twin finds what changed:</b> every flow, route, adjacency and load shift.</li>
+<li><b>The LLM only labels</b> each difference: intended, unintended or unsure.</li>
+<li><b>Plain code decides;</b> missing intent means <span class="v-esc">ESCALATE</span>, never a guess.</li>
+</ul></div></section>
+<div class="two">
+<section class="sec "><h2><span class="n">04</span>Safer and more automated</h2><figure><img src="assets/chart_tradeoff.svg"><figcaption>NetVal (orange) is the only method that is both safe and automated: it catches 97.8% of unsafe
+changes and auto-approves 92.9% of correct ones; the fixed suite blocks 61.9% of correct changes.</figcaption></figure></section>
+<section class="sec "><h2><span class="n">05</span>Ticket quality</h2><figure><img src="assets/chart_tickets.svg"><figcaption>Vague tickets cost some accuracy. With an ID-only ticket NetVal approves nothing and asks a human;
+the one-shot LLM lets 22% of unsafe changes through.</figcaption></figure></section>
+</div>
+<section class="sec "><h2><span class="n">06</span>Main results: all methods, same 87 changes</h2><table class="t">
+<tr><th>Method</th><th>Detect.</th><th>False appr.</th><th>False block</th><th>Auto-appr.</th><th>Tests</th><th>Min</th></tr>
+<tr><td>B1 Full suite</td><td>80.0</td><td>20.0</td><td>61.9</td><td>38.1</td><td>1,559</td><td>20.5</td></tr>
+<tr><td>B2 Rule-based</td><td>60.0</td><td>40.0</td><td>54.8</td><td>45.2</td><td>120</td><td>1.8</td></tr>
+<tr><td>B4 Static only</td><td>60.0</td><td>40.0</td><td>0.0</td><td>38.1</td><td>6</td><td>0.8</td></tr>
+<tr><td>B3 One-shot LLM</td><td>97.8</td><td>2.2</td><td>50.0</td><td>50.0</td><td>28</td><td>3.7</td></tr>
+<tr class="hl"><td>NetVal</td><td>97.8</td><td>2.2</td><td>4.8</td><td>92.9</td><td>12</td><td>2.4</td></tr>
+<tr class="sub"><td>NetVal, 3-run mean</td><td>96.3±1.3</td><td>3.7±1.3</td><td>3.2±1.4</td><td>95.2±2.4</td><td>12</td><td>2.4</td></tr>
+</table>
+</section>
+<section class="sec "><h2><span class="n">07</span>Conclusion</h2><div class="two"><p>A digital twin that computes <b>what changed</b>, plus an LLM that judges only <b>whether the ticket
+explains it</b>, gives a CI gate that is safer and 8.6× faster than running every test, costs about
+<b>US$0.015 per PR</b>, gives the same verdict across runs (κ = 0.92) and <b>fails safe</b> when intent is missing.</p><div class="callout"><b>Limits:</b> our own Python twin, synthetic changes and modelled CI time. <b>Next:</b> real Batfish + containerlab, larger local models and real change tickets.</div></div></section>
+</div>
+<div class="ftr2"><div class="qrbox qr"></div><div><div class="t1">Scan for the code, the 120-change dataset and the full paper</div>
+<div class="t2">github.com/Salmanahmed1078/netval-agentic-change-validation<br>i233019@isb.nu.edu.pk &nbsp;·&nbsp; i236029@isb.nu.edu.pk &nbsp;·&nbsp; Supervisor: Ms. Laraib Afzal</div></div></div>
+</div><script>
+(function(){
+  var q = qrcode(0, 'M'); q.addData('https://github.com/Salmanahmed1078/netval-agentic-change-validation'); q.make();
+  var n = q.getModuleCount(), m = 2, d = '';
+  for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) if (q.isDark(r, c)) d += 'M' + (c + m) + ' ' + (r + m) + 'h1v1h-1z';
+  var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + (n + 2*m) + ' ' + (n + 2*m) + '" shape-rendering="crispEdges">'
+          + '<rect width="100%" height="100%" fill="#fff"/><path d="' + d + '" fill="#0B2547"/></svg>';
+  document.querySelectorAll('.qr').forEach(function(e){ e.innerHTML = svg; });
+})();
+</script></body></html>
